@@ -44,17 +44,21 @@ public class MyArrays{
       + " | Equals? " + arrayToString(ary3).equals(arrayToString(returnCopy(ary3))));
 	System.out.println("Addresses: " + ary3 + ", " + returnCopy(ary3) + " | Original array address = Copy array address? " + (returnCopy(ary3) == ary3));
 	
+	String concatenated = "";
 	
 	System.out.println("Array 1: " + arrayToString(ary) + " | Array 2: " + arrayToString(ary3) + "Added Together: " + arrayToString(concatArray(ary, ary3)));
-	System.out.println("Are the concatenated array strings equal? " ((arrayToString(ary) + arrayToString(ary3)).equals(arrayToString(concatArray(ary, ary3)))));
+	concatenated = arrayToString(ary) + arrayToString(ary3);
+	System.out.println("Are the concatenated array strings equal? " + concatenated.equals(arrayToString(concatArray(ary, ary3))));
 	
 	System.out.println("Array 1: " + arrayToString(ary2) + " | Array 2: " + arrayToString(ary3) + "Added Together: " + arrayToString(concatArray(ary2, ary3)));
-	System.out.println("Are the concatenated array strings equal? " ((arrayToString(ary2) + arrayToString(ary3)) == arrayToString(concatArray(ary2, ary3))));
+	concatenated = arrayToString(ary2) + arrayToString(ary3);
+	System.out.println("Are the concatenated array strings equal? " + concatedated.equals(arrayToString(concatArray(ary2, ary3))));
 	
 	int ary4 = {-9, -8, 31829231, 90, 0};
 	int ary5 = {9, 4, 3, 2, 1, 0, 9, 9, 9};
 	System.out.println("Array 1: " + arrayToString(ary4) + " | Array 2: " + arrayToString(ary5) + "Added Together: " + arrayToString(concatArray(ary4, ary5)));
-	System.out.println("Are the concatenated array strings equal? " ((arrayToString(ary4) + arrayToString(ary5)) == arrayToString(concatArray(ary4, ary5))));
+	concatenated = arrayToString(ar4) + arrayToString(ary5);
+	System.out.println("Are the concatenated array strings equal? " + concatedated.equals(arrayToString(concatArray(ary4, ary5))));
   }
 	
   }
