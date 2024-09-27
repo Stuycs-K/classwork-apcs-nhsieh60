@@ -52,15 +52,12 @@ public class MyArrays{
 	
 	System.out.println("Array 1: " + arrayToString(ary2) + " | Array 2: " + arrayToString(ary3) + "Added Together: " + arrayToString(concatArray(ary2, ary3)));
 	concatenated = arrayToString(ary2) + arrayToString(ary3);
-	System.out.println("Are the concatenated array strings equal? " + concatedated.equals(arrayToString(concatArray(ary2, ary3))));
+	System.out.println("Are the concatenated array strings equal? " + concatenated.equals(arrayToString(concatArray(ary2, ary3))));
 	
-	int ary4 = {-9, -8, 31829231, 90, 0};
-	int ary5 = {9, 4, 3, 2, 1, 0, 9, 9, 9};
+	int[] ary4 = {-9, -8, 31829231, 90, 0};
+	int[] ary5 = {9, 4, 3, 2, 1, 0, 9, 9, 9};
 	System.out.println("Array 1: " + arrayToString(ary4) + " | Array 2: " + arrayToString(ary5) + "Added Together: " + arrayToString(concatArray(ary4, ary5)));
-	concatenated = arrayToString(ar4) + arrayToString(ary5);
-	System.out.println("Are the concatenated array strings equal? " + concatedated.equals(arrayToString(concatArray(ary4, ary5))));
-  }
-	
-  }
+	concatenated = arrayToString(ary4) + arrayToString(ary5);
+	System.out.println("Are the concatenated array strings equal? " + concatenated.equals(arrayToString(concatArray(ary4, ary5))));
   }
 }
