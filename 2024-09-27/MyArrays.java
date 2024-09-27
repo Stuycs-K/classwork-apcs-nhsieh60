@@ -4,9 +4,16 @@ public class MyArrays{
     for(int i = 0; i < nums.length-1; i++){
       arrayS += nums[i] + ", ";
     }
-    if(nums.length() > 0){
-      arrayS += nums[nums.length()-1];
+    if(nums.length > 0){
+      arrayS += nums[nums.length-1];
     }
     return arrayS + "]";
+  }
+  public static int[] returnCopy(int[] ary){
+    int[] ary2 = new int[ary.length];
+    for(int i = 0; i < ary.length; i++){
+      ary2[i] = ary[i];
+    }
+    return ary2;
   }
 }
