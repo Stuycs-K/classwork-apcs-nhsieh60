@@ -16,4 +16,14 @@ public class MyArrays{
     }
     return ary2;
   }
+  public static void main(){
+    int[] ary = {1, 2, 3};
+    System.out.println("Original:" + arrayToString(ary) + " Copy: " + arrayToString(returnCopy(ary))
+      + "Equals? " + arrayToString(ary).equals(arrayToString(returnCopy(ary))));
+    System.out.println("Original array address = Copy array address?" + returnCopy(ary) == ary);
+    int[] ary2 = {};
+    System.out.println("Original:" + arrayToString(ary2) + " Copy: " + arrayToString(returnCopy(ary2))
+      + "Equals? " + arrayToString(ary2).equals(arrayToString(returnCopy(ary2))));
+    System.out.println("Original array address = Copy array address?" + returnCopy(ary2) == ary2);
+  }
 }
