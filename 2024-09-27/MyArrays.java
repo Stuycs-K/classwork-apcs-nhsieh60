@@ -16,6 +16,18 @@ public class MyArrays{
     }
     return ary2;
   }
+  public static int[] concatArray(int[] ary1, int[] ary2){
+	  int[] added = new int[ary1.length + ary2.length];
+	  for(int i = 0; i < ary1.length; i++){
+		  added[i] = ary1[i];
+	  }
+	  int counter = 0;
+	  for(int i = ary1.length; i < ary2.length + ary1.length; i++){
+		  added[i] = ar2[counter];
+		  counter++;
+	  }
+	  return added;
+  }
   public static void main(String[] args){
     int[] ary = {1, 2, 3};
     System.out.println("Original: " + arrayToString(ary) + " | Copy: " + arrayToString(returnCopy(ary))
