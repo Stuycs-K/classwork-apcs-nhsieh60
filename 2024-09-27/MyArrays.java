@@ -47,10 +47,12 @@ public class MyArrays{
 	System.out.println("Array 1: " + arrayToString(ary) + " | Array 2: " + arrayToString(ary3) + "\nAdded Together: " + arrayToString(concatArray(ary, ary3)));
 	
 	System.out.println("Array 1: " + arrayToString(ary2) + " | Array 2: " + arrayToString(ary3) + "\nAdded Together: " + arrayToString(concatArray(ary2, ary3)));
-
 	
-	int[] ary4 = {-9, -8, 31829231, 90, 0};
-	int[] ary5 = {9, 4, 3, 2, 1, 0, 9, 9, 9};
-	System.out.println("Array 1: " + arrayToString(ary4) + " | Array 2: " + arrayToString(ary5) + "\nAdded Together: " + arrayToString(concatArray(ary4, ary5)));
+	ary3 = new int[]{-9, -8, 31829231, 90, 0};
+	ary = new int[]{9, 4, 3, 2, 1, 0, 9, 9, 9};
+	System.out.println("Array 1: " + arrayToString(ary3) + " | Array 2: " + arrayToString(ary) + "\nAdded Together: " + arrayToString(concatArray(ary3, ary)));
+	
+	ary = new int[]{};
+	System.out.println("Array 1: " + arrayToString(ary2) + " | Array 2: " + arrayToString(ary) + "\nAdded Together: " + arrayToString(concatArray(ary2, ary)));
   }
 }
