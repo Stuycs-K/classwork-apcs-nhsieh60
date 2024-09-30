@@ -55,5 +55,10 @@ public class ArrayMethods{
       ary1 = new int[0][0];
       String testString = "[]";
       System.out.println("testString: " + testString + "Result: " + arrToString(ary1) + "Equals? " + testString.equals(arrToString(ary1)));
-  }
+
+      ary1 = new int[][]{{1, 2}, {3, 4}};
+      int sum = 10;
+      System.out.println("Expected sum: " + sum + "Result: " + arr2DSum(ary1) + "Equals? " + arr2DSum == sum);
+
+    }
 }
