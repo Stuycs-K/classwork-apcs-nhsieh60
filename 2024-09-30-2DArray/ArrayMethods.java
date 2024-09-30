@@ -104,14 +104,14 @@ public class ArrayMethods{
 	  System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
 	  
 	  ary1 = new int[][]{{1,2,3},{4,5,6}};
-	  testString = "[[1,4], [2, 5], [3, 6]]";
-	  System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(ary1)));
+	  testString = "[[1, 4], [2, 5], [3, 6]]";
+	  System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(swapRC(ary1))));
 	  ary1 = new int[][]{{1,2},{4,5}};
 	  testString = "[[1, 4], [2, 5]]";
-	  System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(ary1)));
+	  System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(swapRC(ary1))));
 	  ary1 = new int[][]{{1, 2, 5, 6}, {4, 5, 7, 8}, {0, -1, -2147483648, 2147483647}};
 	  testString = "[[1, 4, 0], [2, 5, -1], [5, 7, -2147483648], [6, 8, 2147483647]]";
-	  System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(ary1)));
+	  System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(swapRC(ary1))));
 
     }
 }
