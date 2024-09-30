@@ -8,11 +8,11 @@ public class ArrayMethods{
   */
   public static String arrToString(int[]ary){
     String arrayS = "[";
-    for(int i = 0; i < nums.length-1; i++){
-      arrayS += nums[i] + ", ";
+    for(int i = 0; i < ary.length-1; i++){
+      arrayS += ary[i] + ", ";
     }
-    if(nums.length > 0){
-      arrayS += nums[nums.length-1];
+    if(ary.length > 0){
+      arrayS += ary[ary.length-1];
     }
     return arrayS + "]";
   }
@@ -41,7 +41,7 @@ public class ArrayMethods{
   /*Return the sum of all of the values in the 2D array */
   public static int arr2DSum(int[][]nums){
     //use a nested loop to solve this
-	return 0;
+	return 1;
   }
 
   /**Rotate an array by returning a new array with the rows and columns swapped.
@@ -54,51 +54,51 @@ public class ArrayMethods{
   public static void main(String[] args){
       int[][] ary1 = new int[][]{{1, 2}, {3, 4}};
       String testString = "[[1, 2], [3, 4]]";
-      System.out.println("testString: " + testString + "Result: " + arrToString(ary1) + "Equals? " + testString.equals(arrToString(ary1)));
+      System.out.println("testString: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
       ary1 = new int[][]{{}, {4,4,4,4,4},{-5}};
       testString = "[[], [4, 4, 4, 4, 4], [-5]]";
-      System.out.println("testString: " + testString + "Result: " + arrToString(ary1) + "Equals? " + testString.equals(arrToString(ary1)));
+      System.out.println("testString: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
       ary1 = new int[][]{{}, {}, {}};
       testString = "[[], [], []]";
-      System.out.println("testString: " + testString + "Result: " + arrToString(ary1) + "Equals? " + testString.equals(arrToString(ary1)));
+      System.out.println("testString: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
       ary1 = new int[0][0];
       testString = "[]";
-      System.out.println("testString: " + testString + "Result: " + arrToString(ary1) + "Equals? " + testString.equals(arrToString(ary1)));
+      System.out.println("testString: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
 	  ary1 = new int[][]{{6}, {4,4,4,4,4},{-5}};
       testString = "[[], [4, 4, 4, 4, 4], [-5]]";
-      System.out.println("testString: " + testString + "Result: " + arrToString(ary1) + "Equals? " + testString.equals(arrToString(ary1)));
+      System.out.println("testString: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
 	  ary1 = new int[][]{{7}, {8},{-5}};
       testString = "[[], [4, 4, 4, 4, 4], [-5]]";
-      System.out.println("testString: " + testString + "Result: " + arrToString(ary1) + "Equals? " + testString.equals(arrToString(ary1)));
+      System.out.println("testString: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
 
       ary1 = new int[][]{{1, 2}, {3, 4}};
       int sum = 10;
-      System.out.println("Expected sum: " + sum + "Result: " + arr2DSum(ary1) + "Equals? " + arr2DSum == sum);
+      System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
       ary1 = new int[0][0];
       sum = 0;
-      System.out.println("Expected sum: " + sum + "Result: " + arr2DSum(ary1) + "Equals? " + arr2DSum == sum);
+      System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
       ary1 = new int[][]{{1, 2}, {3, 4}, {1, 3, 3}};
       sum = 17;
-      System.out.println("Expected sum: " + sum + "Result: " + arr2DSum(ary1) + "Equals? " + arr2DSum == sum);
+      System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
       ary1 = new int[][]{{}, {4,4,4,4,4},{-5}};
       sum = 15;
-      System.out.println("Expected sum: " + sum + "Result: " + arr2DSum(ary1) + "Equals? " + arr2DSum == sum);
+      System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
 	  ary1 = new int[2][0];
       sum = 0;
-      System.out.println("Expected sum: " + sum + "Result: " + arr2DSum(ary1) + "Equals? " + arr2DSum == sum);
+      System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
 	  ary1 = new int[][]{{7}, {8},{-5}};
 	  sum = 10;
-	  System.out.println("Expected sum: " + sum + "Result: " + arr2DSum(ary1) + "Equals? " + arr2DSum == sum);
+	  System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
 	  
 	  ary1 = new int[][]{{1,2,3},{4,5,6}};
 	  testString = "[[1,4], [2, 5], [3, 6]]";
-	  System.out.println("Expected array: " + testString + "Result: " + arrToString(swapRC(ary1)) + "Equals? " + testString.equals(arrToString(ary1)));
+	  System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(ary1)));
 	  ary1 = new int[][]{{1,2},{4,5}};
 	  testString = "[[1, 4], [2, 5]]";
-	  System.out.println("Expected array: " + testString + "Result: " + arrToString(swapRC(ary1)) + "Equals? " + testString.equals(arrToString(ary1)));
+	  System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(ary1)));
 	  ary1 = new int[][]{{1, 2, 5, 6}, {4, 5, 7, 8}, {0, -1, -2147483648, 2147483647}};
 	  testString = "[[1, 4, 0], [2, 5, -1], [5, 7, -2147483648], [6, 8, 2147483647]]";
-	  System.out.println("Expected array: " + testString + "Result: " + arrToString(swapRC(ary1)) + "Equals? " + testString.equals(arrToString(ary1)));
+	  System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(ary1)));
 
     }
 }
