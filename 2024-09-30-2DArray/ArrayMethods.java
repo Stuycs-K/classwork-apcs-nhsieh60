@@ -45,6 +45,15 @@ public class ArrayMethods{
   public static void main(String[] args){
       int[][] ary1 = new int[][]{{1, 2}, {3, 4}};
       String testString = "[[1, 2], [3, 4]]";
-      System.out.println("testString: " + testString + "Equals? " + testString.equals(arrToString(ary1)));
+      System.out.println("testString: " + testString + "Result: " + arrToString(ary1) + "Equals? " + testString.equals(arrToString(ary1)));
+      ary1 = new int[][]{{}, {4,4,4,4,4},{-5}};
+      String testString = "[[], [4,4,4,4,4], [-5]]";
+      System.out.println("testString: " + testString + "Result: " + arrToString(ary1) + "Equals? " + testString.equals(arrToString(ary1)));
+      ary1 = new int[][]{{}, {}, {}};
+      String testString = "[[], [], []]";
+      System.out.println("testString: " + testString + "Result: " + arrToString(ary1) + "Equals? " + testString.equals(arrToString(ary1)));
+      ary1 = new int[0][0];
+      String testString = "[]";
+      System.out.println("testString: " + testString + "Result: " + arrToString(ary1) + "Equals? " + testString.equals(arrToString(ary1)));
   }
 }
