@@ -59,6 +59,15 @@ public class ArrayMethods{
       ary1 = new int[][]{{1, 2}, {3, 4}};
       int sum = 10;
       System.out.println("Expected sum: " + sum + "Result: " + arr2DSum(ary1) + "Equals? " + arr2DSum == sum);
+      ary1 = new int[0][0];
+      int sum = 0;
+      System.out.println("Expected sum: " + sum + "Result: " + arr2DSum(ary1) + "Equals? " + arr2DSum == sum);
+      ary1 = new int[][]{{1, 2}, {3, 4}, {1, 3, 3}};
+      int sum = 17;
+      System.out.println("Expected sum: " + sum + "Result: " + arr2DSum(ary1) + "Equals? " + arr2DSum == sum);
+      ary1 = new int[][]{{}, {4,4,4,4,4},{-5}};
+      int sum = 15;
+      System.out.println("Expected sum: " + sum + "Result: " + arr2DSum(ary1) + "Equals? " + arr2DSum == sum);
 
     }
 }
