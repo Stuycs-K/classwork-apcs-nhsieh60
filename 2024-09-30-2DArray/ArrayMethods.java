@@ -65,10 +65,10 @@ public class ArrayMethods{
       testString = "[]";
       System.out.println("testString: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
 	  ary1 = new int[][]{{6}, {4,4,4,4,4},{-5}};
-      testString = "[[], [4, 4, 4, 4, 4], [-5]]";
+      testString = "[[6], [4, 4, 4, 4, 4], [-5]]";
       System.out.println("testString: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
 	  ary1 = new int[][]{{7}, {8},{-5}};
-      testString = "[[], [4, 4, 4, 4, 4], [-5]]";
+      testString = "[[7], [8], [-5]]";
       System.out.println("testString: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
 
       ary1 = new int[][]{{1, 2}, {3, 4}};
