@@ -181,7 +181,7 @@ public class ArrayMethods{
     System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
 	//copy test cases
 	ary1 = new int[][]{{-1, -1, -1}, {-1, -1, -1}, {-1, -1, -1}};
-	ary2 = copy(ary1);
+	int[][] ary2 = copy(ary1);
 	System.out.println("Original array: " + arrToString(ary1) + " | Copy: " + arrToString(ary2) + " | Equals? " + arrToString(ary1).equals(arrToString(ary2)));
 	System.out.println("Addresses: " + ary1 + ", " + ary2 + "| Not equal? " + (ary1 == ary2));
 	ary1[0][0] = 123;
@@ -208,7 +208,7 @@ public class ArrayMethods{
 	ary2 = copy(ary1);
 	System.out.println("Original array: " + arrToString(ary1) + " | Copy: " + arrToString(ary2) + " | Equals? " + arrToString(ary1).equals(arrToString(ary2)));
 	System.out.println("Addresses: " + ary1 + ", " + ary2 + "| Not equal? " + (ary1 == ary2));
-	ary1[1] = {-9, -2, 3};
+	ary1[1] = new int[]{-9, -2, 3};
 	System.out.println("Changed original array: " + arrToString(ary1) + " | Unchanged copy: " + arrToString(ary2) + " | Not equal? " + (ary1 == ary2));
     }
 }
