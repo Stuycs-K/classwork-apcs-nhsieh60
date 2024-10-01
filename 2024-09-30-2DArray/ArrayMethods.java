@@ -116,6 +116,7 @@ public class ArrayMethods{
     testString = "[[7], [8], [-5]]";
     System.out.println("testString: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
     //arr2DSum test cases
+	System.out.println("arr2DSum: ");
     ary1 = new int[][]{{1, 2}, {3, 4}};
     int sum = 10;
     System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
@@ -135,6 +136,7 @@ public class ArrayMethods{
 	sum = 10;
 	System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
     //swapRC test cases
+	System.out.println("swapRC: ");
 	ary1 = new int[][]{{1,2,3},{4,5,6}};
 	testString = "[[1, 4], [2, 5], [3, 6]]";
 	System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(swapRC(ary1))));
@@ -151,6 +153,7 @@ public class ArrayMethods{
 	testString = "[[1], [2], [3], [4]]";
 	System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(swapRC(ary1))));
     //replaceNegative test cases
+	System.out.println("replaceNegative: ");
     ary1 = new int[][]{{-1, -1, -1}, {-1, -1, -1}, {-1, -1, -1}};
     testString = "[[1, 0, 0], [0, 1, 0], [0, 0, 1]]";
     replaceNegative(ary1);
@@ -180,6 +183,7 @@ public class ArrayMethods{
     replaceNegative(ary1);
     System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
 	//copy test cases
+	System.out.println("copy: ");
 	ary1 = new int[][]{{-1, -1, -1}, {-1, -1, -1}, {-1, -1, -1}};
 	int[][] ary2 = copy(ary1);
 	System.out.println("Original array: " + arrToString(ary1) + " | Copy: " + arrToString(ary2) + " | Equals? " + arrToString(ary1).equals(arrToString(ary2)));
