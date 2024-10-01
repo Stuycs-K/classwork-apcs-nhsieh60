@@ -140,6 +140,10 @@ public class ArrayMethods{
     //replaceNegative test cases
     ary1 = new int[][]{{-1, -1, -1}, {-1, -1, -1}, {-1, -1, -1}};
     testString = "[[1, 0, 0], [0, 1, 0], [0, 0, 1]]";
+    replaceNegative(ary1);
+    System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+    ary1 = new int[][]{{1, 1}, {1, 1, 1}, {1}};
+    testString = "[[1, 1], [1, 1, 1], [1]]";
     replaceNegative(ary1); 
     System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
 
