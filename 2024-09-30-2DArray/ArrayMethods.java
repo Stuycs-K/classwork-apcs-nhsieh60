@@ -1,3 +1,4 @@
+// Galen Jack galenj@nycstudents.net, Naomi Hsieh naomih44@nycstudents.net
 public class ArrayMethods{
   //1. Write both your names + emails at the top of the document as a comment.
   // Galen Jack galenj@nycstudents.net, Naomi Hsieh naomih44@nycstudents.net
