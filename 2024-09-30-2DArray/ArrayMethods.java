@@ -144,7 +144,11 @@ public class ArrayMethods{
     System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
     ary1 = new int[][]{{1, 1}, {1, 1, 1}, {1}};
     testString = "[[1, 1], [1, 1, 1], [1]]";
-    replaceNegative(ary1); 
+    replaceNegative(ary1);
+    System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+    ary1 = new int[0][0];
+    testString = "[]";
+    replaceNegative(ary1);
     System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
 
 
