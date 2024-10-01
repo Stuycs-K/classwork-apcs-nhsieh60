@@ -150,6 +150,23 @@ public class ArrayMethods{
     testString = "[]";
     replaceNegative(ary1);
     System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+	ary1 = new int[][]{{1989, -214748364}, {22, 2147483647}, {0, -3219381}};
+    testString = "[[1989, 0], [22, 2147483647], [0, 0]]";
+    replaceNegative(ary1);
+    System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+	ary1 = new int[][]{{-1, -2}, {-3, -3, -4, -5}, {-1, 3, 4}};
+    testString = "[[1, 0], [0, 1, 0, 0], [0, 3, 4]]";
+    replaceNegative(ary1);
+    System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+	ary1 = new int[][]{{-2, 3}, {5, -1}};
+    testString = "[[1, 3], [5, 1]]";
+    replaceNegative(ary1);
+    System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+	ary1 = new int[][]{{}, {}, {}};
+    testString = "[[], [], []]";
+    replaceNegative(ary1);
+    System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+	
 
 
 
