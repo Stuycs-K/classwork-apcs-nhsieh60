@@ -7,27 +7,29 @@ public class ArrayDemo{
     //do not use any other Arrays.method()
 
     //arrToString test cases
+	System.out.println("arrToString: ");
     int[][] ary1 = new int[][]{{1, 2}, {3, 4}};
-    System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
     int[] ary = new int[]{1, 2, 3};
     System.out.println("Expected: " + Arrays.toString(ary) + " | Result: " + arrToString(ary) + " | Equals? " + Arrays.toString(ary).equals(arrToString(ary)));
     ary = new int[0];
-    System.out.println("Expected: " + Arrays.toString(ary) + " | Result: " + arrToString(ary) + " | Equals? " + Arrays.toString(ary2).equals(arrToString(ary)));
+    System.out.println("Expected: " + Arrays.toString(ary) + " | Result: " + arrToString(ary) + " | Equals? " + Arrays.toString(ary).equals(arrToString(ary)));
     ary = new int[]{-1, 0, -2147483648, 2147483647};
-    System.out.println("Expected: " + Arrays.toString(ary) + " | Result: " + arrToString(ary) + " | Equals? " + Arrays.toString(ary2).equals(arrToString(ary)));
+    System.out.println("Expected: " + Arrays.toString(ary) + " | Result: " + arrToString(ary) + " | Equals? " + Arrays.toString(ary).equals(arrToString(ary)));
     ary1 = new int[][]{{}, {4,4,4,4,4},{-5}};
-    System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
     ary1 = new int[][]{{}, {}, {}};
-    System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
     ary1 = new int[0][0];
-    System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
     ary1 = new int[][]{{6}, {4,4,4,4,4},{-5}};
-    System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
     ary1 = new int[][]{{7}, {8},{-5}};
-    System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
 
 
     //countZeros2D test cases
+	System.out.println("countZeros2D: ");
     ary1 = new int[][]{{0, 0}, {0, 1, 2}, {}};
 	int expected = 3;
 	System.out.println("Expected: " + expected + " | Result: " + countZeros2D(ary1) + " | Equals? " + (expected == countZeros2D(ary1)));
@@ -57,6 +59,7 @@ public class ArrayDemo{
 	System.out.println("Expected: " + expected + " | Result: " + countZeros2D(ary1) + " | Equals? " + (expected == countZeros2D(ary1)));
 	
 	//htmlTable test cases
+	System.out.println("htmlTable: ");
 	ary1 = new int[][]{{1, 2}, {3}};
 	String testString = "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>";
 	System.out.println("Expected: " + testString + " | Result: " + htmlTable(ary1) + " | Equals? " + (testString.equals(htmlTable(ary1))));
@@ -182,8 +185,6 @@ public class ArrayDemo{
 	System.out.println("Changed original array: " + arrToString(ary1) + " | Unchanged copy: " + arrToString(ary2) + " | Not equal? " + !(ary1 == ary2));
     }
 
-  }
-
   //0. Include your prior methods to help you print a 1D/2D array of ints.
   public static String arrToString(int[]ary){
     String arrayS = "[";
@@ -279,6 +280,8 @@ public class ArrayDemo{
   			rotated[j][i] = nums[i][j];
   		}
 	   }
+	   
+	return rotated;
   }
 
   //6. Make an HTML table by putting a table tag around the entire 2d array,
