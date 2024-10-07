@@ -9,7 +9,7 @@ public class ArrayDemo{
     //arrToString test cases
 	System.out.println("arrToString: ");
     int[][] ary1 = new int[][]{{1, 2}, {3, 4}};
-    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.deepToString(ary1).equals(arrToString(ary1)));
     int[] ary = new int[]{1, 2, 3};
     System.out.println("Expected: " + Arrays.toString(ary) + " | Result: " + arrToString(ary) + " | Equals? " + Arrays.toString(ary).equals(arrToString(ary)));
     ary = new int[0];
@@ -17,15 +17,15 @@ public class ArrayDemo{
     ary = new int[]{-1, 0, -2147483648, 2147483647};
     System.out.println("Expected: " + Arrays.toString(ary) + " | Result: " + arrToString(ary) + " | Equals? " + Arrays.toString(ary).equals(arrToString(ary)));
     ary1 = new int[][]{{}, {4,4,4,4,4},{-5}};
-    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.deepToString(ary1).equals(arrToString(ary1)));
     ary1 = new int[][]{{}, {}, {}};
-    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.deepToString(ary1).equals(arrToString(ary1)));
     ary1 = new int[0][0];
-    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.deepToString(ary1).equals(arrToString(ary1)));
     ary1 = new int[][]{{6}, {4,4,4,4,4},{-5}};
-    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.deepToString(ary1).equals(arrToString(ary1)));
     ary1 = new int[][]{{7}, {8},{-5}};
-    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.deepToString(ary1).equals(arrToString(ary1)));
 
 
     //countZeros2D test cases
