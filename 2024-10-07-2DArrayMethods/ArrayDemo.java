@@ -67,7 +67,7 @@ public class ArrayDemo{
 	testString = "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr></table>";
 	System.out.println("Expected: " + testString + " | Result: " + htmlTable(ary1) + " | Equals? " + (testString.equals(htmlTable(ary1))));
 	ary1 = new int[][]{{-2147483648, 2147483647}, {0, -1}, {}};
-	testString = "<table><tr><td>-2147483648</td><td>2147483647</td></tr><tr><td>0</td><td>1</td></tr><tr></tr></table>";
+	testString = "<table><tr><td>-2147483648</td><td>2147483647</td></tr><tr><td>0</td><td>-1</td></tr><tr></tr></table>";
 	System.out.println("Expected: " + testString + " | Result: " + htmlTable(ary1) + " | Equals? " + (testString.equals(htmlTable(ary1))));
 	ary1 = new int[][]{{1, 2, 3, 4}, {-3, -4, 0, 10}};
 	testString = "<table><tr><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>-3</td><td>-4</td><td>0</td><td>10</td></tr></table>";
@@ -298,7 +298,19 @@ public class ArrayDemo{
   //   Note there is no whitespace in the string, it all one line with no spaces/tabs.
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
+  public static String htmlRow(int[] nums){
+	String row = "<tr>";
+	for(int i = 0; i < nums.length; i++){
+		row += "<td>" + nums[i] + "</td>";
+	}
+	return row + "</tr>";
+  }
+  
   public static String htmlTable(int[][]nums){
-    return "";
+	String table = "<table>";
+	for(int i = 0; i < nums.length; i++){
+		table += htmlRow(nums[i]);
+	}
+    return table += "</table>";
   }
 }
