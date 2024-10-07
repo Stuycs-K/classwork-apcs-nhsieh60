@@ -26,6 +26,11 @@ public class ArrayDemo{
     ary1 = new int[][]{{7}, {8},{-5}};
     System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
 
+
+    //countZeros2D test cases
+    ary1 = new int[][]{{0, 0}, {0, 1, 2}, {}};
+    System.out.println("Expected: " + Arrays.toStringcountZeros2D(ary1))
+
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
