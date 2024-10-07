@@ -5,7 +5,27 @@ public class ArrayDemo{
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
-    
+
+    //arrToString test cases
+    int[][] ary1 = new int[][]{{1, 2}, {3, 4}};
+    System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    int[] ary2 = new int[]{1, 2, 3};
+    System.out.println("Expected: " + Arrays.toString(ary2) + " | Result: " + arrToString(ary2) + " | Equals? " + Arrays.toString(ary2).equals(arrToString(ary2)));
+    ary2 = new int[0];
+    System.out.println("Expected: " + Arrays.toString(ary2) + " | Result: " + arrToString(ary2) + " | Equals? " + Arrays.toString(ary2).equals(arrToString(ary2)));
+    ary2 = new int[]{-1, 0, -2147483648, 2147483647};
+    System.out.println("Expected: " + Arrays.toString(ary2) + " | Result: " + arrToString(ary2) + " | Equals? " + Arrays.toString(ary2).equals(arrToString(ary2)));
+    ary1 = new int[][]{{}, {4,4,4,4,4},{-5}};
+    System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    ary1 = new int[][]{{}, {}, {}};
+    System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    ary1 = new int[0][0];
+    System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    ary1 = new int[][]{{6}, {4,4,4,4,4},{-5}};
+    System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+    ary1 = new int[][]{{7}, {8},{-5}};
+    System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
+
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
