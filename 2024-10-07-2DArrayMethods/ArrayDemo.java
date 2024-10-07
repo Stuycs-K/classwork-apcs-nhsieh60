@@ -29,7 +29,135 @@ public class ArrayDemo{
 
     //countZeros2D test cases
     ary1 = new int[][]{{0, 0}, {0, 1, 2}, {}};
-    System.out.println("Expected: " + Arrays.toStringcountZeros2D(ary1))
+	int expected = 3;
+	System.out.println("Expected: " + expected + " | Result: " + countZeros2D(ary1) + " | Equals? " + (expected == countZeros2D(ary1)));
+	ary1 = new int[][]{{0, 0, -2147483648, 2147483647}, {0, 1, 2}, {0}};
+	expected = 4;
+	System.out.println("Expected: " + expected + " | Result: " + countZeros2D(ary1) + " | Equals? " + (expected == countZeros2D(ary1)));
+	ary1 = new int[][]{{1, 0, -2147483648, 2147483647}, {0, 1, 2, 5}, {0, 2, -1, 31829}};
+	expected = 3;
+	System.out.println("Expected: " + expected + " | Result: " + countZeros2D(ary1) + " | Equals? " + (expected == countZeros2D(ary1)));
+	ary1 = new int[][]{{0, 0}, {1, 2}};
+	expected = 2;
+	System.out.println("Expected: " + expected + " | Result: " + countZeros2D(ary1) + " | Equals? " + (expected == countZeros2D(ary1)));
+	ary1 = new int[][]{{0, 1}, {1, 0}};
+	expected = 2;
+	System.out.println("Expected: " + expected + " | Result: " + countZeros2D(ary1) + " | Equals? " + (expected == countZeros2D(ary1)));
+	ary1 = new int[][]{{}, {}};
+	expected = 0;
+	System.out.println("Expected: " + expected + " | Result: " + countZeros2D(ary1) + " | Equals? " + (expected == countZeros2D(ary1)));
+	ary1 = new int[0][0];
+	expected = 0;
+	System.out.println("Expected: " + expected + " | Result: " + countZeros2D(ary1) + " | Equals? " + (expected == countZeros2D(ary1)));
+	ary1 = new int[][]{{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, {10, 9, 8, 7, 6, 5, 4, 3, 2, 1}};
+	expected = 0;
+	System.out.println("Expected: " + expected + " | Result: " + countZeros2D(ary1) + " | Equals? " + (expected == countZeros2D(ary1)));
+	ary1 = new int[][]{{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, {10, 9, 8, 7, 6, 5, 4, 3}};
+	expected = 0;
+	System.out.println("Expected: " + expected + " | Result: " + countZeros2D(ary1) + " | Equals? " + (expected == countZeros2D(ary1)));
+	
+	
+	//JUST IN CASE
+	//arr2DSum test cases
+	System.out.println("arr2DSum: ");
+    ary1 = new int[][]{{1, 2}, {3, 4}};
+    int sum = 10;
+    System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
+    ary1 = new int[0][0];
+    sum = 0;
+    System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
+    ary1 = new int[][]{{1, 2}, {3, 4}, {1, 3, 3}};
+    sum = 17;
+    System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
+    ary1 = new int[][]{{}, {4,4,4,4,4},{-5}};
+    sum = 15;
+    System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
+	ary1 = new int[2][0];
+    sum = 0;
+    System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
+	ary1 = new int[][]{{7}, {8},{-5}};
+	sum = 10;
+	System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
+    //swapRC test cases
+	System.out.println("swapRC: ");
+	ary1 = new int[][]{{1,2,3},{4,5,6}};
+	testString = "[[1, 4], [2, 5], [3, 6]]";
+	System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(swapRC(ary1))));
+	ary1 = new int[][]{{1,2},{4,5}};
+	testString = "[[1, 4], [2, 5]]";
+	System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(swapRC(ary1))));
+	ary1 = new int[][]{{1, 2, 5, 6}, {4, 5, 7, 8}, {0, -1, -2147483648, 2147483647}};
+	testString = "[[1, 4, 0], [2, 5, -1], [5, 7, -2147483648], [6, 8, 2147483647]]";
+	System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(swapRC(ary1))));
+	ary1 = new int[][]{{1}, {4}, {0}};
+	testString = "[[1, 4, 0]]";
+	System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(swapRC(ary1))));
+	ary1 = new int[][]{{1, 2, 3, 4}};
+	testString = "[[1], [2], [3], [4]]";
+	System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(swapRC(ary1))));
+    //replaceNegative test cases
+	System.out.println("replaceNegative: ");
+    ary1 = new int[][]{{-1, -1, -1}, {-1, -1, -1}, {-1, -1, -1}};
+    testString = "[[1, 0, 0], [0, 1, 0], [0, 0, 1]]";
+    replaceNegative(ary1);
+    System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+    ary1 = new int[][]{{1, 1}, {1, 1, 1}, {1}};
+    testString = "[[1, 1], [1, 1, 1], [1]]";
+    replaceNegative(ary1);
+    System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+    ary1 = new int[0][0];
+    testString = "[]";
+    replaceNegative(ary1);
+    System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+	ary1 = new int[][]{{1989, -2147483648}, {22, 2147483647}, {0, -3219381}};
+    testString = "[[1989, 0], [22, 2147483647], [0, 0]]";
+    replaceNegative(ary1);
+    System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+	ary1 = new int[][]{{-1, -2}, {-3, -3, -4, -5}, {-1, 3, 4}};
+    testString = "[[1, 0], [0, 1, 0, 0], [0, 3, 4]]";
+    replaceNegative(ary1);
+    System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+	ary1 = new int[][]{{-2, 3}, {5, -1}};
+    testString = "[[1, 3], [5, 1]]";
+    replaceNegative(ary1);
+    System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+	ary1 = new int[][]{{}, {}, {}};
+    testString = "[[], [], []]";
+    replaceNegative(ary1);
+    System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+	//copy test cases
+	System.out.println("copy: ");
+	ary1 = new int[][]{{-1, -1, -1}, {-1, -1, -1}, {-1, -1, -1}};
+	int[][] ary2 = copy(ary1);
+	System.out.println("Original array: " + arrToString(ary1) + " | Copy: " + arrToString(ary2) + " | Equals? " + arrToString(ary1).equals(arrToString(ary2)));
+	System.out.println("Addresses: " + ary1 + ", " + ary2 + "| Not equal? " + !(ary1 == ary2));
+	ary1[0][0] = 123;
+	System.out.println("Changed original array: " + arrToString(ary1) + " | Unchanged copy: " + arrToString(ary2) + " | Not equal? " + !(ary1 == ary2));
+	ary1 = new int[][]{{1, 1}, {1, 1, 1}, {1}};
+	ary2 = copy(ary1);
+	System.out.println("Original array: " + arrToString(ary1) + " | Copy: " + arrToString(ary2) + " | Equals? " + arrToString(ary1).equals(arrToString(ary2)));
+	System.out.println("Addresses: " + ary1 + ", " + ary2 + "| Not equal? " + !(ary1 == ary2));
+	ary1[1][2] = -2147483648;
+	System.out.println("Changed original array: " + arrToString(ary1) + " | Unchanged copy: " + arrToString(ary2) + " | Not equal? " + !(ary1 == ary2));
+	ary1 = new int[][]{{1989, -2147483648}, {22, 2147483647}, {0, -3219381}};
+	ary2 = copy(ary1);
+	System.out.println("Original array: " + arrToString(ary1) + " | Copy: " + arrToString(ary2) + " | Equals? " + arrToString(ary1).equals(arrToString(ary2)));
+	System.out.println("Addresses: " + ary1 + ", " + ary2 + "| Not equal? " + !(ary1 == ary2));
+	ary1[1][0] = 2147483647;
+	System.out.println("Changed original array: " + arrToString(ary1) + " | Unchanged copy: " + arrToString(ary2) + " | Not equal? " + !(ary1 == ary2));
+	ary1 = new int[][]{{-1, -2}, {-3, -3, -4, -5}, {-1, 3, 4}};
+	ary2 = copy(ary1);
+	System.out.println("Original array: " + arrToString(ary1) + " | Copy: " + arrToString(ary2) + " | Equals? " + arrToString(ary1).equals(arrToString(ary2)));
+	System.out.println("Addresses: " + ary1 + ", " + ary2 + "| Not equal? " + !(ary1 == ary2));
+	ary1[2][1] = 0;
+	System.out.println("Changed original array: " + arrToString(ary1) + " | Unchanged copy: " + arrToString(ary2) + " | Not equal? " + !(ary1 == ary2));
+	ary1 = new int[][]{{-2, 3}, {5, -1}};
+	ary2 = copy(ary1);
+	System.out.println("Original array: " + arrToString(ary1) + " | Copy: " + arrToString(ary2) + " | Equals? " + arrToString(ary1).equals(arrToString(ary2)));
+	System.out.println("Addresses: " + ary1 + ", " + ary2 + "| Not equal? " + !(ary1 == ary2));
+	ary1[1] = new int[]{-9, -2, 3};
+	System.out.println("Changed original array: " + arrToString(ary1) + " | Unchanged copy: " + arrToString(ary2) + " | Not equal? " + !(ary1 == ary2));
+    }
 
   }
 
