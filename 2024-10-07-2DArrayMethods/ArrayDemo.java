@@ -9,12 +9,12 @@ public class ArrayDemo{
     //arrToString test cases
     int[][] ary1 = new int[][]{{1, 2}, {3, 4}};
     System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
-    int[] ary2 = new int[]{1, 2, 3};
-    System.out.println("Expected: " + Arrays.toString(ary2) + " | Result: " + arrToString(ary2) + " | Equals? " + Arrays.toString(ary2).equals(arrToString(ary2)));
-    ary2 = new int[0];
-    System.out.println("Expected: " + Arrays.toString(ary2) + " | Result: " + arrToString(ary2) + " | Equals? " + Arrays.toString(ary2).equals(arrToString(ary2)));
-    ary2 = new int[]{-1, 0, -2147483648, 2147483647};
-    System.out.println("Expected: " + Arrays.toString(ary2) + " | Result: " + arrToString(ary2) + " | Equals? " + Arrays.toString(ary2).equals(arrToString(ary2)));
+    int[] ary = new int[]{1, 2, 3};
+    System.out.println("Expected: " + Arrays.toString(ary) + " | Result: " + arrToString(ary) + " | Equals? " + Arrays.toString(ary).equals(arrToString(ary)));
+    ary = new int[0];
+    System.out.println("Expected: " + Arrays.toString(ary) + " | Result: " + arrToString(ary) + " | Equals? " + Arrays.toString(ary2).equals(arrToString(ary)));
+    ary = new int[]{-1, 0, -2147483648, 2147483647};
+    System.out.println("Expected: " + Arrays.toString(ary) + " | Result: " + arrToString(ary) + " | Equals? " + Arrays.toString(ary2).equals(arrToString(ary)));
     ary1 = new int[][]{{}, {4,4,4,4,4},{-5}};
     System.out.println("Expected: " + Arrays.toString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.toString(ary1).equals(arrToString(ary1)));
     ary1 = new int[][]{{}, {}, {}};
@@ -56,8 +56,28 @@ public class ArrayDemo{
 	expected = 0;
 	System.out.println("Expected: " + expected + " | Result: " + countZeros2D(ary1) + " | Equals? " + (expected == countZeros2D(ary1)));
 	
+	//htmlTable test cases
+	ary1 = new int[][]{{1, 2}, {3}};
+	String testString = "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>";
+	System.out.println("Expected: " + testString + " | Result: " + htmlTable(ary1) + " | Equals? " + (testString.equals(htmlTable(ary1))));
+	ary1 = new int[][]{{1, 2}, {3, 4}};
+	testString = "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr></table>";
+	System.out.println("Expected: " + testString + " | Result: " + htmlTable(ary1) + " | Equals? " + (testString.equals(htmlTable(ary1))));
+	ary1 = new int[][]{{-2147483648, 2147483647}, {0, -1}, {}};
+	testString = "<table><tr><td>-2147483648</td><td>2147483647</td></tr><tr><td>0</td><td>1</td></tr><tr></tr></table>";
+	System.out.println("Expected: " + testString + " | Result: " + htmlTable(ary1) + " | Equals? " + (testString.equals(htmlTable(ary1))));
+	ary1 = new int[][]{{1, 2, 3, 4}, {-3, -4, 0, 10}};
+	testString = "<table><tr><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>-3</td><td>-4</td><td>0</td><td>10</td></tr></table>";
+	System.out.println("Expected: " + testString + " | Result: " + htmlTable(ary1) + " | Equals? " + (testString.equals(htmlTable(ary1))));
+	ary1 = new int[][]{{}, {}, {}, {}, {}};
+	testString = "<table><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr></table>";
+	System.out.println("Expected: " + testString + " | Result: " + htmlTable(ary1) + " | Equals? " + (testString.equals(htmlTable(ary1))));
+	ary1 = new int[][]{};
+	testString = "<table></table>";
+	System.out.println("Expected: " + testString + " | Result: " + htmlTable(ary1) + " | Equals? " + (testString.equals(htmlTable(ary1))));
 	
 	//JUST IN CASE
+	
 	//arr2DSum test cases
 	System.out.println("arr2DSum: ");
     ary1 = new int[][]{{1, 2}, {3, 4}};
@@ -78,6 +98,7 @@ public class ArrayDemo{
 	ary1 = new int[][]{{7}, {8},{-5}};
 	sum = 10;
 	System.out.println("Expected sum: " + sum + " | Result: " + arr2DSum(ary1) + " | Equals? " + (arr2DSum(ary1) == sum));
+	
     //swapRC test cases
 	System.out.println("swapRC: ");
 	ary1 = new int[][]{{1,2,3},{4,5,6}};
@@ -95,6 +116,7 @@ public class ArrayDemo{
 	ary1 = new int[][]{{1, 2, 3, 4}};
 	testString = "[[1], [2], [3], [4]]";
 	System.out.println("Expected array: " + testString + " | Result: " + arrToString(swapRC(ary1)) + " | Equals? " + testString.equals(arrToString(swapRC(ary1))));
+	
     //replaceNegative test cases
 	System.out.println("replaceNegative: ");
     ary1 = new int[][]{{-1, -1, -1}, {-1, -1, -1}, {-1, -1, -1}};
@@ -125,6 +147,7 @@ public class ArrayDemo{
     testString = "[[], [], []]";
     replaceNegative(ary1);
     System.out.println("Expected array: " + testString + " | Result: " + arrToString(ary1) + " | Equals? " + testString.equals(arrToString(ary1)));
+	
 	//copy test cases
 	System.out.println("copy: ");
 	ary1 = new int[][]{{-1, -1, -1}, {-1, -1, -1}, {-1, -1, -1}};
