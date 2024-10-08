@@ -7,6 +7,8 @@ public class ArrayDemo{
     //do not use any other Arrays.method()
 
     //arrToString test cases
+	//NOTE: For 2D Arrays I used Arrays.deepToString() as you said that would work for 2D Arrays in class and we could use it 
+	//when answering a classmate's question; putting this here for clarification
 	System.out.println("arrToString: ");
     int[][] ary1 = new int[][]{{1, 2}, {3, 4}};
     System.out.println("Expected: " + Arrays.deepToString(ary1) + " | Result: " + arrToString(ary1) + " | Equals? " + Arrays.deepToString(ary1).equals(arrToString(ary1)));
