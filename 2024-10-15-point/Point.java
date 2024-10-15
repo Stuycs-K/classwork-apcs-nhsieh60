@@ -29,12 +29,12 @@ public class Point{
   Write this method FOURTH, go to the main and do that one first.
   */
   public double distanceTo(Point other){
-    return 0.0;
+    return Math.pow(Math.pow((other.x - x),2) + Math.pow((other.y - y), 2), 0.5);
   }
 
   /*
   Write this method last. Re-use (NOT COPY/PASTE) prior work and
-  do not write redundant code.
+  do not write redundant cootherde.
   */
   public static double distance(Point a, Point b){
     return 0.0;
