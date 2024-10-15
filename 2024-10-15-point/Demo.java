@@ -32,6 +32,13 @@ public class Demo{
    System.out.println( Point.distance(p1,p2));
    System.out.println( p1.distanceTo(p2));
 
+   Point eqP1 = new Point(0, 0);
+   Point eqP2 = new Point(1, 0);
+   Point eqP3 = new Point(0.5, Math.sqrt(3)*0.5);
+   System.out.println("distance between " + eqP1 + " and " + eqP2 + ": " + distance(eqP1,eqP2));
+   System.out.println("distance between " + eqP1 + " and " + eqP3 + ": " + distance(eqP1,eqP3));
+   System.out.println("distance between " + eqP2 + " and " + eqP3 + ": " + distance(eqP2,eqP3));
+
 
   }
 }
