@@ -26,18 +26,24 @@ public class Demo{
     System.out.println( Point.distance(p1,p2));
     System.out.println( p1.distanceTo(p2));
 
-   p1 = new Point(-40,-10);
-   p2  = new Point(0,-1);
-   System.out.println("distance between " + p1 + " and " + p2 + ": " + distance(p1,p2));
-   System.out.println( Point.distance(p1,p2));
-   System.out.println( p1.distanceTo(p2));
+    p1 = new Point(-40,-10);
+    p2  = new Point(0,-1);
+    System.out.println("distance between " + p1 + " and " + p2 + ": " + distance(p1,p2));
+    System.out.println( Point.distance(p1,p2));
+    System.out.println( p1.distanceTo(p2));
+   
+    p2 = new Point(0.1,1.3);
+    p1  = new Point(4.2,-5.1);
+    System.out.println("distance between " + p1 + " and " + p2 + ": " + distance(p1,p2));
+    System.out.println( Point.distance(p1,p2));
+    System.out.println( p1.distanceTo(p2));
 
-   Point eqP1 = new Point(0, 0);
-   Point eqP2 = new Point(1, 0);
-   Point eqP3 = new Point(0.5, Math.sqrt(3)*0.5);
-   System.out.println("distance between " + eqP1 + " and " + eqP2 + ": " + distance(eqP1,eqP2));
-   System.out.println("distance between " + eqP1 + " and " + eqP3 + ": " + distance(eqP1,eqP3));
-   System.out.println("distance between " + eqP2 + " and " + eqP3 + ": " + distance(eqP2,eqP3));
+    Point eqP1 = new Point(0, 0);
+    Point eqP2 = new Point(1, 0);
+    Point eqP3 = new Point(0.5, Math.sqrt(3)*0.5);
+    System.out.println("distance between " + eqP1 + " and " + eqP2 + ": " + distance(eqP1,eqP2));
+    System.out.println("distance between " + eqP1 + " and " + eqP3 + ": " + distance(eqP1,eqP3));
+    System.out.println("distance between " + eqP2 + " and " + eqP3 + ": " + distance(eqP2,eqP3));
 
 
   }
