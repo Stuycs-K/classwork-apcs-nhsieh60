@@ -1,3 +1,5 @@
+//PARTNER: Jessica Seto jessicas388@nycstudents.net
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -18,17 +20,24 @@ public class ReadFile {
       sum += sc2.nextDouble();
     }
     System.out.println("Sum " + sum);
+
     //2 Opening a file requires a try/catch
-  /*  try {
-      File file = new File("PUT_FILENAME_HERE");//1
+    try {
+      File file = new File("ReadFile.java");//1
       Scanner input = new Scanner(file);
       //CODE THAT SCANS THE FILE.
+      while(input.hasNextLine()){
+        System.out.println(input.nextLine());
+        if(input.hasNextLine()){
+          input.nextLine();
+        }
+      }
       input.close();//releases the file from your program
 
     } catch (FileNotFoundException ex) {
       //File not found what should you do?
       System.out.println("File not found");
       return; //you can return from a void function just don't put a value.
-    }*/
+    }
   }
 }
