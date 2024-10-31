@@ -46,5 +46,8 @@ public class ReadFile {
       System.out.println("File not found");
       return; //you can return from a void function just don't put a value.
     }
+	
+	//3 TriangleTester
+	System.out.println("Expected: 2 Result: " + TriangleTester.countTrianglesA("inputTri.txt"));
   }
 }
