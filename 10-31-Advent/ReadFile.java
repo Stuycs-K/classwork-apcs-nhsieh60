@@ -10,6 +10,14 @@ public class ReadFile {
     while(sc1.hasNext()){
         System.out.println(sc1.next());
     }
+
+    //calculating sum
+    Scanner sc2 = new Scanner("10.0 1.04 99.0 -3.0 4.2");
+    double sum = 0;
+    while(sc2.hasNextDouble()){
+      sum += sc2.nextDouble();
+    }
+    System.out.println("Sum " + sum);
     //2 Opening a file requires a try/catch
   /*  try {
       File file = new File("PUT_FILENAME_HERE");//1
