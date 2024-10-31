@@ -26,10 +26,17 @@ public class ReadFile {
       File file = new File("ReadFile.java");//1
       Scanner input = new Scanner(file);
       //CODE THAT SCANS THE FILE.
-      while(input.hasNextLine()){
+    /*  while(input.hasNextLine()){
         System.out.println(input.nextLine());
         if(input.hasNextLine()){
           input.nextLine();
+        }
+      } */
+      String hasBracket = "";
+      while(input.hasNextLine()){
+        hasBracket = input.nextLine();
+        if(hasBracket.indexOf("{") != -1){
+          System.out.println(hasBracket);
         }
       }
       input.close();//releases the file from your program
