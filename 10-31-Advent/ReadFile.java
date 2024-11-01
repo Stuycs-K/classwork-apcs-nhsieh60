@@ -10,7 +10,7 @@ public class ReadFile {
     //printing out one word per line
     Scanner sc1 = new Scanner("This is a bunch of words");
     while(sc1.hasNext()){
-        System.out.println(sc1.next());
+       System.out.println(sc1.next());
     }
 
     //calculating sum
@@ -36,7 +36,7 @@ public class ReadFile {
       while(input.hasNextLine()){
         hasBracket = input.nextLine();
         if(hasBracket.indexOf("{") != -1){
-          System.out.println(hasBracket);
+         System.out.println(hasBracket);
         }
       }
       input.close();//releases the file from your program
@@ -48,7 +48,7 @@ public class ReadFile {
     }
 	
 	//3 TriangleTester
-	System.out.println("Expected: 3 Result: " + TriangleTester.countTrianglesA("inputTri.txt"));
-	System.out.println("Expected: 6 Result: " + TriangleTester.countTrianglesB("inputTri.txt"));
+	System.out.println("Expected: 52 Result: " + TriangleTester.countTrianglesA("inputTri.txt"));
+	System.out.println("Expected: 95 Result: " + TriangleTester.countTrianglesB("inputTri.txt"));
   }
 }

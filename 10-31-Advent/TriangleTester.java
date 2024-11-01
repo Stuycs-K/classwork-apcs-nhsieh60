@@ -5,6 +5,11 @@ import java.util.Scanner;
 public class TriangleTester{
 	
 	public static boolean triangleTest(int a, int b, int c){
+		/*System.out.println("\n" + a + " " + b + " " + c);
+		System.out.println((a + b) + ">" + c + " " + (a + b > c));
+		System.out.println((a + c) + ">" + b + " " + (a + c > b));
+		System.out.println((c + b) + ">" + a + " " + (c + b > a));
+		System.out.println(a + b > c && a + c > b && b + c > a);*/
 		return a + b > c && a + c > b && b + c > a; 
 	}
 	
