@@ -48,6 +48,7 @@ public class ReadFile {
     }
 	
 	//3 TriangleTester
-	System.out.println("Expected: 2 Result: " + TriangleTester.countTrianglesA("inputTri.txt"));
+	System.out.println("Expected: 3 Result: " + TriangleTester.countTrianglesA("inputTri.txt"));
+	System.out.println("Expected: 6 Result: " + TriangleTester.countTrianglesB("inputTri.txt"));
   }
 }
