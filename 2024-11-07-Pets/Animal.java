@@ -31,7 +31,7 @@ public class Animal {
   public String getNoise(){
     return noise;
   }
-  public String getAge(){
+  public int getAge(){
     return age;
   }
 }
