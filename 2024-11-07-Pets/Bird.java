@@ -26,7 +26,11 @@ public class Bird extends Animal {
   */
   //You can call the old method using super.speak();
   //public void speak(){}
-
+  public void speak(){
+    super.speak();
+    System.out.println("My feathers are colored " + color);
+    System.out.println("I am " + height + " inches tall");
+  }
 
 
   //7:Override the getName() method so that a bid's name is "The Mighty NAME" instead of "NAME"
