@@ -3,16 +3,16 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class TriangleTester{
-	
+
 	public static boolean triangleTest(int a, int b, int c){
 		/*System.out.println("\n" + a + " " + b + " " + c);
 		System.out.println((a + b) + ">" + c + " " + (a + b > c));
 		System.out.println((a + c) + ">" + b + " " + (a + c > b));
 		System.out.println((c + b) + ">" + a + " " + (c + b > a));
 		System.out.println(a + b > c && a + c > b && b + c > a);*/
-		return a + b > c && a + c > b && b + c > a; 
+		return a + b > c && a + c > b && b + c > a;
 	}
-	
+
 	public static int countTrianglesA(String filename){
 		try{
 			File file = new File(filename);
@@ -21,7 +21,7 @@ public class TriangleTester{
 			int b = 0;
 			int c = 0;
 			int count = 0;
-			while(triangles.hasNextLine()){
+			while(triangles.hasNextInt()){
 				a = triangles.nextInt();
 				b = triangles.nextInt();
 				c = triangles.nextInt();
@@ -39,7 +39,7 @@ public class TriangleTester{
 			return 0;
 		}
 	}
-	
+
 	public static int countTrianglesB(String filename){
 		try{
 			File file = new File(filename);
@@ -51,7 +51,7 @@ public class TriangleTester{
 			Scanner line2;
 			Scanner line3;
 			int count = 0;
-			while(triangles.hasNextLine()){
+			while(triangles.hasNextInt()){
 				row1 = triangles.nextLine();
 				row2 = triangles.nextLine();
 				row3 = triangles.nextLine();
@@ -65,7 +65,7 @@ public class TriangleTester{
 						count++;
 					}
 				}
-				
+
 			}
 			triangles.close();
 			return count;
