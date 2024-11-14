@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class ArrayListPractice{
   public static void main(String[] args){
 
-    int input = (int)(Math.random()*200000);
     System.out.println(createRandomArray(4));
     ArrayList<String> inputal= createRandomArray(5);
     ArrayList<String> inputal2= createRandomArray(3);
@@ -16,11 +15,18 @@ public class ArrayListPractice{
     System.out.println("Inputs: " + inputal + ", " + inputal2);
 	System.out.println("Result (mixLists): " + mixLists(inputal, inputal2));
 	System.out.println("Result (mixLists): " + mixLists(inputal2, inputal));
-
-  //  inputal= createRandomArray(input);
-  //  System.out.println("Input: " + inputal);
-  //  replaceEmpty(inputal);
-  //  System.out.println("Result: " + inputal);
+	
+	//is there a delay?
+    inputal= createRandomArray(200000);
+	inputal2= createRandomArray(200000);
+    System.out.println("\nInput: " + inputal);
+    replaceEmpty(inputal);
+    System.out.println("Result: " + inputal);
+	System.out.println("Result (makeReversedList): " + makeReversedList(inputal));
+	replaceEmpty(inputal2);
+    System.out.println("Inputs: " + inputal + ", " + inputal2);
+	System.out.println("Result (mixLists): " + mixLists(inputal, inputal2));
+	System.out.println("Result (mixLists): " + mixLists(inputal2, inputal));
 
   }
 
