@@ -6,17 +6,26 @@ public class ArrayListPractice{
     System.out.println(createRandomArray(4));
     ArrayList<String> inputal= createRandomArray(5);
     ArrayList<String> inputal2= createRandomArray(3);
-
-    System.out.println("Input: " + inputal);
-    replaceEmpty(inputal);
-    System.out.println("Result (replaceEmpty): " + inputal);
-    System.out.println("Result (makeReversedList): " + makeReversedList(inputal));
-	replaceEmpty(inputal2);
-    System.out.println("Inputs: " + inputal + ", " + inputal2);
-	System.out.println("Result (mixLists): " + mixLists(inputal, inputal2));
-	System.out.println("Result (mixLists): " + mixLists(inputal2, inputal));
+	for(int i = 0; i < 5; i++){
+		System.out.println("Input1: " + inputal + ", Input2: " + inputal2);
+		System.out.println("Result (makeReversedList--Input1): " + makeReversedList(inputal));
+		System.out.println("Result (mixLists--Input1 and Input2): " + mixLists(inputal, inputal2));
+		System.out.println("Result (mixLists--Input2 and Input1): " + mixLists(inputal2, inputal));
+		replaceEmpty(inputal);
+		System.out.println("Result (replaceEmpty--Input1): " + inputal);
+		System.out.println("Result (makeReversedList--Input1): " + makeReversedList(inputal));
+		replaceEmpty(inputal2);
+		System.out.println("Result (replaceEmpty--Input2): " + inputal2);
+		System.out.println("Result (mixLists--Input1 and Input2): " + mixLists(inputal, inputal2));
+		System.out.println("Result (mixLists--Input2 and Input1): " + mixLists(inputal2, inputal));
+		System.out.println("\n");
+		inputal= createRandomArray((int)(Math.random()*10));
+		inputal2= createRandomArray((int)(Math.random()*10));
+	}
+    
 	
 	//is there a delay?
+	
     inputal= createRandomArray(200000);
 	inputal2= createRandomArray(200000);
     System.out.println("\nInput: " + inputal);
