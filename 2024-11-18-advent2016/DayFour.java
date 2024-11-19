@@ -1,3 +1,8 @@
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
 public class DayFour{
   public static void main(String[] args){
     System.out.println(partOne("DayFourInput.txt"));
