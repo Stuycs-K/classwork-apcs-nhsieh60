@@ -7,6 +7,7 @@ public class Advent2016{
   public static void main(String[] args){
 	System.out.println(dayOne("DayOneInput.txt"));
 	System.out.println(dayTwo("DayTwoInput.txt"));
+	System.out.println(dayOnePartTwo("DayOnePartTwoInput.txt"));
   }
   public static int dayOne(String filename){
 	try{
