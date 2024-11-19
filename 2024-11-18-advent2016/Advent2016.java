@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 public class Advent2016{
   public static void main(String[] args){
 	System.out.println(dayOne("DayOneInput.txt"));
+	System.out.println(dayTwo("DayTwoInput.txt"));
   }
   public static int dayOne(String filename){
 	try{
@@ -16,8 +17,8 @@ public class Advent2016{
 		String curDirection = "";
 		int steps = 0;
 		while(directions.hasNext()){
-			System.out.println("Previous Direction: " + prevDirection);
-			System.out.println("Previous coordinates: (" + x + ", " + y + ")");
+			//System.out.println("Previous Direction: " + prevDirection);
+			//System.out.println("Previous coordinates: (" + x + ", " + y + ")");
 			curDirection = directions.next();
 			if(curDirection.charAt(curDirection.length()-1) == ','){
 				curDirection = curDirection.substring(0, curDirection.length()-1);
@@ -65,8 +66,8 @@ public class Advent2016{
 					prevDirection = "N";
 				}
 			}
-			System.out.println("Given directions: " + curDirection + steps);
-			System.out.println("Current coordinates: (" + x + ", " + y + ")\n");
+			//System.out.println("Given directions: " + curDirection + steps);
+			//System.out.println("Current coordinates: (" + x + ", " + y + ")\n");
 		}
 		directions.close();
 		return Math.abs(x)+Math.abs(y);
@@ -87,21 +88,24 @@ public class Advent2016{
 		int y = 1;
 		while(directions.hasNextLine()){
 			curDirections = directions.nextLine();
+			//System.out.println(curDirections);
+			//System.out.println(keypad[x][y]);
 			for(int i = 0; i < curDirections.length(); i++){
-				if(curDirections.charAt(i) == "U" && y > 0){
+				if(curDirections.charAt(i) == 'U' && y > 0){
 					y -= 1;
 				}
-				if(curDirections.charAt(i) == "D" && y < 2){
+				if(curDirections.charAt(i) == 'D' && y < 2){
 					y += 1;
 				}
-				if(curDirections.charAt(i) == "L" && x > 0){
+				if(curDirections.charAt(i) == 'L' && x > 0){
 					x -= 1;
 				}
-				if(curDirections.charAt(i) == "R" && x < 2){
+				if(curDirections.charAt(i) == 'R' && x < 2){
 					x += 1;
 				}
+				//System.out.println(keypad[y][x]);
 			}
-			code += keypad[x][y];
+			code += keypad[y][x];
 		}
 		return code;
 	}
