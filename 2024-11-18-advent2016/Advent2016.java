@@ -7,7 +7,7 @@ public class Advent2016{
   public static void main(String[] args){
 	System.out.println(dayOne("DayOneInput.txt"));
 	System.out.println(dayTwo("DayTwoInput.txt"));
-	System.out.println(dayOnePartTwo("DayOnePartTwoInput.txt"));
+	System.out.println(dayOnePartTwo("DayOneInput.txt"));
   }
   public static int dayOne(String filename){
 	try{
@@ -89,7 +89,7 @@ public class Advent2016{
 		String prevDirection = "N";
 		String curDirection = "";
 		int steps = 0;
-		ArrayList<Integer> coordinates = new ArrayList();
+		ArrayList<Integer> coordinates = new ArrayList<Integer>();
 		while(directions.hasNext()){
 			//System.out.println("Previous Direction: " + prevDirection);
 			//System.out.println("Previous coordinates: (" + x + ", " + y + ")");
@@ -101,54 +101,126 @@ public class Advent2016{
 			curDirection = curDirection.substring(0,1);
 			if(prevDirection.equals("S")){
 				if(curDirection.equals("R")){
-					x -= steps;
+					for(int j = 0; j < steps; j++){
+						x -= 1;
+						for(int i = 0; i < coordinates.size(); i+=2){
+							if(coordinates.get(i) == x && coordinates.get(i+1) == y){
+								return Math.abs(x) + Math.abs(y);
+							}
+						}
+						coordinates.add(x); 
+						coordinates.add(y);
+					}
 					prevDirection = "W";
 				}
 				else{
-					x += steps;
+					for(int j = 0; j < steps; j++){
+						x += 1;
+						for(int i = 0; i < coordinates.size(); i+=2){
+							if(coordinates.get(i) == x && coordinates.get(i+1) == y){
+								return Math.abs(x) + Math.abs(y);
+							}
+						}
+						coordinates.add(x); 
+						coordinates.add(y);
+					}
 					prevDirection = "E";
 				}
 			}
 			else if(prevDirection.equals("W")){
 				if(curDirection.equals("R")){
-					y += steps;
+					for(int j = 0; j < steps; j++){
+						y += 1;
+						for(int i = 0; i < coordinates.size(); i+=2){
+							if(coordinates.get(i) == x && coordinates.get(i+1) == y){
+								return Math.abs(x) + Math.abs(y);
+							}
+						}
+						coordinates.add(x); 
+						coordinates.add(y);
+					}
 					prevDirection = "N";
 				}
 				else{
-					y -= steps;
+					for(int j = 0; j < steps; j++){
+						y -= 1;
+						for(int i = 0; i < coordinates.size(); i+=2){
+							if(coordinates.get(i) == x && coordinates.get(i+1) == y){
+								return Math.abs(x) + Math.abs(y);
+							}
+						}
+						coordinates.add(x); 
+						coordinates.add(y);
+					}
 					prevDirection = "S";
 					
 				}
 			}
 			else if(prevDirection.equals("N")){
 				if(curDirection.equals("R")){
-					x += steps;
+					for(int j = 0; j < steps; j++){
+						x += 1;
+						for(int i = 0; i < coordinates.size(); i+=2){
+							if(coordinates.get(i) == x && coordinates.get(i+1) == y){
+								return Math.abs(x) + Math.abs(y);
+							}
+						}
+						coordinates.add(x); 
+						coordinates.add(y);
+					}
 					prevDirection = "E";
 				}
 				else{
-					x -= steps;
+					for(int j = 0; j < steps; j++){
+						x -= 1;
+						for(int i = 0; i < coordinates.size(); i+=2){
+							if(coordinates.get(i) == x && coordinates.get(i+1) == y){
+								return Math.abs(x) + Math.abs(y);
+							}
+						}
+						coordinates.add(x); 
+						coordinates.add(y);
+					}
 					prevDirection = "W";
 				}
 			}
 			else{
 				if(curDirection.equals("R")){
-					y -= steps;
+					for(int j = 0; j < steps; j++){
+						y -= 1;
+						for(int i = 0; i < coordinates.size(); i+=2){
+							if(coordinates.get(i) == x && coordinates.get(i+1) == y){
+								return Math.abs(x) + Math.abs(y);
+							}
+						}
+						coordinates.add(x); 
+						coordinates.add(y);
+					}
 					prevDirection = "S";
 				}
 				else{
-					y += steps;
+					for(int j = 0; j < steps; j++){
+						y += 1;
+						for(int i = 0; i < coordinates.size(); i+=2){
+							if(coordinates.get(i) == x && coordinates.get(i+1) == y){
+								return Math.abs(x) + Math.abs(y);
+							}
+						}
+						coordinates.add(x); 
+						coordinates.add(y);
+					}
 					prevDirection = "N";
 				}
 			}
 			//System.out.println("Given directions: " + curDirection + steps);
-			//System.out.println("Current coordinates: (" + x + ", " + y + ")\n");
+			/*System.out.println("Current coordinates: (" + x + ", " + y + ")\n");
 			for(int i = 0; i < coordinates.size(); i+=2){
 				if(coordinates.get(i) == x && coordinates.get(i+1) == y){
 					return x + y;
 				}
 			}
 			coordinates.add(x);
-			coordinates.add(y);
+			coordinates.add(y);*/
 		}
 		directions.close();
 		return Math.abs(x)+Math.abs(y);
