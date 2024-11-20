@@ -3,9 +3,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
-public class DayTwo{
+public class DaySix{
 	public static void main(String[] args){
-		System.out.println(partOne("DayTwoInput.txt"));
+		System.out.println(partOne("DaySixInput.txt"));
 	}
 	
 	public static String partOne(String filename){
@@ -15,15 +15,20 @@ public class DayTwo{
 		String result = "";
 		int[] alphabetCount = new int[26];
 		ArrayList<String> columns = new ArrayList<String>();
-		String row = "";
+		String row = message.nextLine();
+		for(int i = 0; i < row.length(); i++){
+			columns.add(""+row.charAt(i));
+		}
 		while(message.hasNextLine()){
 			row = message.nextLine();
 			for(int i = 0; i < row.length(); i++){
-				columns.set(i, columns.get(i)+=row[i]);
+				columns.set(i, columns.get(i)+row.charAt(i));
+				//System.out.println(columns);
 			}
+			
 		}
 		int max = 0;
-		char maxi = '';
+		char maxi = 'a';
 		for(int i = 0; i < columns.size(); i++){
 			for(int j = 0; j < columns.get(i).length(); j++){
 				alphabetCount[columns.get(i).charAt(j)-97]++;
@@ -35,7 +40,8 @@ public class DayTwo{
 				}
 			}
 			result += maxi;
-			alphabetCount =  = new int[26];
+			max = 0;
+			alphabetCount = new int[26];
 		}
 		return result;
 		
