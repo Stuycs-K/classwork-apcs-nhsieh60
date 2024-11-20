@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class DayFour{
   public static void main(String[] args){
     System.out.println(partOne("DayFourInput.txt"));
-	 System.out.println(partTwo("DayFourInput.txt"));
+	partTwo("DayFourInput.txt");
   }
   public static int partOne(String filename){
     try{
@@ -134,10 +134,12 @@ public class DayFour{
       }
 	ArrayList<String> decrypted = new ArrayList<String>();
 	String decrypting = "";
-	int sectorID = 0;
+	String sectorID = "";
+	String[] splitted = new String[1];
 	 for(int i = 0; i < realRooms.size(); i++){
-		sectorID = realRooms.get(i).split("-")[realRooms.get(i).split("-").length-1].substring(0, realRooms.get(i).split("-")[realRooms.get(i).split("-").length-1].indexOf("["));
-		for(int j = 0; j < realRooms.get(i).length()-realRooms.get(i).split("-")[realRooms.get(i).split("-").length-1].length; j++){
+		 splitted = realRooms.get(i).split("-");
+		sectorID = splitted[splitted.length-1].substring(0, splitted[splitted.length-1].indexOf("["));
+		for(int j = 0; j < realRooms.get(i).length()-splitted[splitted.length-1].length(); j++){
 			if(realRooms.get(i).charAt(j) == '-'){
 				decrypting += " ";
 			}
@@ -145,9 +147,10 @@ public class DayFour{
 				decrypting += "" + (char)((realRooms.get(i).charAt(j)-97+Integer.parseInt(sectorID))%26+97);
 			}
 		}
-		if(decrypting.indexOf("object") != 0){
+		if(decrypting.indexOf("north") != -1){
 			System.out.println(decrypting + " " + sectorID);
 		}
+		decrypting = "";
 	 }
     }
     catch(FileNotFoundException e){
