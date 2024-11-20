@@ -52,4 +52,48 @@ public class DaySix{
 	}
   }
   
+  public static String partTwo(String filename){
+	  try{
+		File file = new File(filename);
+		Scanner message = new Scanner(file);
+		String result = "";
+		int[] alphabetCount = new int[26];
+		ArrayList<String> columns = new ArrayList<String>();
+		String row = message.nextLine();
+		for(int i = 0; i < row.length(); i++){
+			columns.add(""+row.charAt(i));
+		}
+		while(message.hasNextLine()){
+			row = message.nextLine();
+			for(int i = 0; i < row.length(); i++){
+				columns.set(i, columns.get(i)+row.charAt(i));
+				//System.out.println(columns);
+			}
+			
+		}
+		int min = -1;
+		char mini = 'a';
+		for(int i = 0; i < columns.size(); i++){
+			for(int j = 0; j < columns.get(i).length(); j++){
+				alphabetCount[columns.get(i).charAt(j)-97]++;
+			}
+			for(int j = 0; j < alphabetCount.length; j++){
+				if(alphabetCount[j] < min){
+					min = alphabetCount[j];
+					mini = (char)(j+97);
+				}
+			}
+			result += mini;
+			min = 0;
+			alphabetCount = new int[26];
+		}
+		return result;
+		
+	}
+	catch(FileNotFoundException e){
+		System.out.println("File not found");
+		return "";
+	}
+  }
+  
 }
