@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class DaySix{
 	public static void main(String[] args){
 		System.out.println(partOne("DaySixInput.txt"));
+		System.out.println(partTwo("DaySixInput.txt"));
 	}
 	
 	public static String partOne(String filename){
@@ -71,20 +72,21 @@ public class DaySix{
 			}
 			
 		}
-		int min = -1;
+		int min = 1000000000;
 		char mini = 'a';
 		for(int i = 0; i < columns.size(); i++){
 			for(int j = 0; j < columns.get(i).length(); j++){
 				alphabetCount[columns.get(i).charAt(j)-97]++;
 			}
+			min = alphabetCount[0];
 			for(int j = 0; j < alphabetCount.length; j++){
-				if(alphabetCount[j] < min){
+				if(alphabetCount[j] < min && alphabetCount[j] != 0){
 					min = alphabetCount[j];
 					mini = (char)(j+97);
 				}
+				//System.out.println(min);
 			}
 			result += mini;
-			min = 0;
 			alphabetCount = new int[26];
 		}
 		return result;
