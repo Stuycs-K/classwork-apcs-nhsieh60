@@ -14,6 +14,7 @@ public class ColorDemo{
       System.out.println();
     }
       System.out.println(" \u001b[0m I have reset the colors.");
+      System.out.println("\u001b[1;4;38;2;200;10;255m lots of settings here");
   }
 
 }
