@@ -2,6 +2,12 @@ public class ColorDemo{
   public static final String CLEAR_SCREEN =  "\u001b[2J";
   public static final String HIDE_CURSOR =  "\u001b[?25l";
   public static final String SHOW_CURSOR =  "\u001b[?25h";
+public static void sleep(int milli){
+      try{
+              Thread.sleep(milli);
+      }catch(Exception e){
+      }
+}
   public static void makeBubble(int n){
 	int whitespace = n-4;
 	int counter = 4;
@@ -56,6 +62,8 @@ public class ColorDemo{
 	  for(int i = 0; i < 10; i++){
 		  makeBubble((int)(Math.random() * 11) + 6);
 		  System.out.println("\u001b[0m");
+		  sleep(500);
+		  System.out.println(CLEAR_SCREEN);
 	  }
 	  
 	//System.out.println("\u001b[0m");
