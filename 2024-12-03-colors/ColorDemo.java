@@ -63,6 +63,7 @@ public static void sleep(int milli){
 		  makeBubble((int)(Math.random() * 11) + 6);
 		  System.out.println("\u001b[0m");
 		  sleep(500);
+		  System.out.println("\u001b[H");
 		  System.out.println(CLEAR_SCREEN);
 	  }
 	  
