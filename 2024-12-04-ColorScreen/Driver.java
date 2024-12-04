@@ -2,21 +2,21 @@ public class Driver{
 	public static void border(int color){
 		Text.go(1, 1);
 		for(int i = 1; i <= 80; i++){
-			Text.color(Text.background(color));
-			System.out.print(" ");
+			Text.color(37, Text.background(color));
+			System.out.print("*");
 		}
 		for(int i = 2; i < 30; i++){
 			Text.go(i, 1);
-			Text.color(Text.background(color));
-			System.out.print(" "+Text.RESET);
+			Text.color(37, Text.background(color));
+			System.out.print("*"+Text.RESET);
 			Text.go(i, 80);
-			Text.color(Text.background(color));
-			System.out.print(" "+Text.RESET);
+			Text.color(37, Text.background(color));
+			System.out.print("*"+Text.RESET);
 		}
 		Text.go(30, 1);
 		for(int i = 1; i <= 80; i++){
-			Text.color(Text.background(color));
-			System.out.print(" ");
+			Text.color(37, Text.background(color));
+			System.out.print("*");
 		}
 	}
 	public static void numbers(){
@@ -40,10 +40,20 @@ public class Driver{
 			}
 		}
 	}
+	public static void separator(int color){
+		Text.go(3, 1);
+		for(int i = 1; i <= 80; i++){
+			Text.color(37, Text.background(color));
+			System.out.print("-");
+		}
+	}
 	public static void main(String[] args){
 		System.out.println(Text.CLEAR_SCREEN);
-		border((int)(Math.random()*7)+31);
+		int borderColor = (int)(Math.random()*6)+31;
+		border(borderColor);
 		numbers();
+		separator(borderColor);
+		Text.go(31, 1);
 		System.out.println(Text.RESET);
 	}
 }
