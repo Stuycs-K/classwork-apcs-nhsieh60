@@ -7,13 +7,13 @@ public class ColorDemo{
 	int counter = 4;
 	for(int i = 4; i < n; i++){
 		for(int j = 0; j < whitespace; j++){
-			System.out.print("\u001b[37m ");
+			System.out.print("\u001b[107m ");
 		}
 		for(int j = 0; j < counter; j++){
-			System.out.print("\u001b[36m ");
+			System.out.print("\u001b[106m ");
 		}
 		for(int j = 0; j < whitespace; j++){
-			System.out.print("\u001b[37m ");
+			System.out.print("\u001b[107m ");
 		}
 		System.out.println();
 		whitespace--;
@@ -23,13 +23,13 @@ public class ColorDemo{
 	counter -= 2;
 	for(int i = n; i > 4; i--){
 		for(int j = 0; j <= whitespace; j++){
-			System.out.print("\u001b[37m ");
+			System.out.print("\u001b[107m ");
 		}
 		for(int j = 0; j < counter; j++){
-			System.out.print("\u001b[36m ");
+			System.out.print("\u001b[106m ");
 		}
 		for(int j = 0; j <= whitespace; j++){
-			System.out.print("\u001b[37m ");
+			System.out.print("\u001b[107m ");
 		}
 		System.out.println();
 		whitespace++;
