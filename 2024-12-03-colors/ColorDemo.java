@@ -8,15 +8,15 @@ public static void sleep(int milli){
       }catch(Exception e){
       }
 }
-  public static void makeBubble(int n){
-	int whitespace = n-4;
+  public static void makeBubble(String color, int size){
+	int whitespace = size-4;
 	int counter = 4;
-	for(int i = 4; i < n; i++){
+	for(int i = 4; i < size; i++){
 		for(int j = 0; j < whitespace; j++){
 			System.out.print("\u001b[107m ");
 		}
 		for(int j = 0; j < counter; j++){
-			System.out.print("\u001b[106m ");
+			System.out.print("\u001b["+color+"m ");
 		}
 		for(int j = 0; j < whitespace; j++){
 			System.out.print("\u001b[107m ");
@@ -27,12 +27,12 @@ public static void sleep(int milli){
 	}
 	whitespace = 0;
 	counter -= 2;
-	for(int i = n; i > 4; i--){
+	for(int i = size; i > 4; i--){
 		for(int j = 0; j <= whitespace; j++){
 			System.out.print("\u001b[107m ");
 		}
 		for(int j = 0; j < counter; j++){
-			System.out.print("\u001b[106m ");
+			System.out.print("\u001b["+color+"m ");
 		}
 		for(int j = 0; j <= whitespace; j++){
 			System.out.print("\u001b[107m ");
@@ -44,7 +44,7 @@ public static void sleep(int milli){
   }
 
   public static void main(String[] args){
-    for(int b = 0; b < 256; b+=32){
+  /*  for(int b = 0; b < 256; b+=32){
       for(int r = 0; r <= 256; r+=32){
         for(int g = 0; g <= 256; g+=32){
           System.out.print("\u001b[38;2;"+r+";"+g+";"+b+";7m ");
@@ -58,9 +58,9 @@ public static void sleep(int milli){
 	  makeBubble(7);
 	  System.out.println();
 	  makeBubble(10);
-	  System.out.println();
-	  for(int i = 0; i < 10; i++){
-		  makeBubble((int)(Math.random() * 11) + 6);
+	  System.out.println();*/
+	  for(int i = 0; i < 7; i++){
+		  makeBubble(""+(100+i), (int)(Math.random() * 11) + 6);
 		  System.out.println("\u001b[0m");
 		  sleep(500);
 		  System.out.println("\u001b[H");
