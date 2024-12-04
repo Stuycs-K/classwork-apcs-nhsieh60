@@ -7,13 +7,13 @@ public class ColorDemo{
 	int counter = 4;
 	for(int i = 4; i < n; i++){
 		for(int j = 0; j < whitespace; j++){
-			System.out.print("W");
+			System.out.print("\u001b[37m ");
 		}
 		for(int j = 0; j < counter; j++){
-			System.out.print("B");
+			System.out.print("\u001b[36m ");
 		}
 		for(int j = 0; j < whitespace; j++){
-			System.out.print("W");
+			System.out.print("\u001b[37m ");
 		}
 		System.out.println();
 		whitespace--;
@@ -23,13 +23,13 @@ public class ColorDemo{
 	counter -= 2;
 	for(int i = n; i > 4; i--){
 		for(int j = 0; j <= whitespace; j++){
-			System.out.print("W");
+			System.out.print("\u001b[37m ");
 		}
 		for(int j = 0; j < counter; j++){
-			System.out.print("B");
+			System.out.print("\u001b[36m ");
 		}
 		for(int j = 0; j <= whitespace; j++){
-			System.out.print("W");
+			System.out.print("\u001b[37m ");
 		}
 		System.out.println();
 		whitespace++;
@@ -57,5 +57,7 @@ public class ColorDemo{
 		  makeBubble((int)(Math.random() * 11) + 6);
 		  System.out.println();
 	  }
+	  
+	System.out.println(" \u001b[0m I have reset the colors.");
   }
 }
