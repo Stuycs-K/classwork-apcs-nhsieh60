@@ -47,12 +47,19 @@ public class Driver{
 			System.out.print("-");
 		}
 	}
+	public static void drawSomething(int color){
+		Text.go(18, 38);
+		Text.color(30, Text.background(color));
+		System.out.print("o7" + Text.RESET);
+		
+	}
 	public static void main(String[] args){
-		System.out.println(Text.CLEAR_SCREEN);
+		//System.out.println(Text.CLEAR_SCREEN);
 		int borderColor = (int)(Math.random()*6)+31;
 		border(borderColor);
 		numbers();
 		separator(borderColor);
+		drawSomething(borderColor);
 		Text.go(31, 1);
 		System.out.println(Text.RESET);
 	}
