@@ -55,9 +55,9 @@ public class ColorDemo{
 	  System.out.println();
 	  for(int i = 0; i < 10; i++){
 		  makeBubble((int)(Math.random() * 11) + 6);
-		  System.out.println();
+		  System.out.println(\u001b[0m);
 	  }
 	  
-	System.out.println(" \u001b[0m I have reset the colors.");
+	//System.out.println("\u001b[0m");
   }
 }
