@@ -15,7 +15,7 @@ public class Mage extends Adventurer{
   }
 
   public String getSpecialName(){
-    return "mana";
+    return "Mana";
   }
 
   public int getSpecial(){
@@ -31,37 +31,34 @@ public class Mage extends Adventurer{
   }
 
   public String attack(Adventurer other){
-    other.applyDamage(mana);
-    this.setSpecial(this.mana-1);
-    return "Cast attack spell on enemy! It did " + mana + "damage!";
+	int damage = (int)(Math.random()*6);
+    other.applyDamage(damage);
+    return "punched enemy " +  other + "! It did " + damage + " damage!";
   }
 
   public String support(Adventurer other){
-    if(this.HP + this.mana < this.maxHP){
-      other.setHP(other.getHP+this.mana);
-      this.setSpecial(this.mana-1);
-      return "Cast recover on ally! It healed " + mana + "health!";
-    }
-    else{
-      other.setHP(other.getmaxHP);
-      this.setSpecial(this.mana-1);
-      return "Cast heal on ally! It healed " + mana + "health!";
+	  other.restoreSpecial(1);
+      return "cast recover on ally " + other + "! It recovered 1 special stat!";
     }
   }
-
+  
   public String support(){
     if(this.HP + this.mana < this.maxHP){
       super.setHP(this.HP+this.mana);
       this.setSpecial(this.mana-1);
-      return "Cast heal on self! It healed " + mana + "health!";
+      return "cast heal on self! It healed " + mana+1 + " health!";
     }
     else{
       super.setHP(this.maxHP);
       this.setSpecial(this.mana-1);
-      return "Cast heal on self! It healed " + mana + "health!";
+      return "cast heal on self! It healed " + mana+1 + " health!";
     }
 
-
+	public String specialAttack(Adventurer other){
+		other.applyDamage(this.mana);
+		this.setSpecial(this.mana-1);
+		return "cast attack spell on + " + other + "! It did " + this.mana+1 + " damage!";
+	}
   }
 
 }
