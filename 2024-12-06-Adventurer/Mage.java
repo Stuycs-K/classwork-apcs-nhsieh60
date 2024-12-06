@@ -25,9 +25,38 @@ public class Mage extends Adventurer{
   public int getSpecialMax(){
     return maxMana;
   }
-  
+
   public void setSpecial(int n){
     this.mana = n;
+  }
+
+  public String attack(Adventurer other){
+    other.applyDamage(mana);
+    return "Cast attack spell on enemy! It did " + mana + "damage!";
+  }
+
+  public String support(Adventurer other){
+    if(this.HP + this.mana < this.maxHP){
+      other.setHP(other.getHP+this.mana);
+      return "Cast heal on ally! It healed " + mana + "health!";
+    }
+    else{
+      other.setHP(other.getmaxHP);
+      return "Cast heal on ally! It healed " + mana + "health!";
+    }
+  }
+
+  public String support(){
+    if(this.HP + this.mana < this.maxHP){
+      super.setHP(this.HP+this.mana);
+      return "Cast heal on self! It healed " + mana + "health!";
+    }
+    else{
+      super.setHP(this.maxHP);
+      return "Cast heal on self! It healed " + mana + "health!";
+    }
+
+
   }
 
 }
