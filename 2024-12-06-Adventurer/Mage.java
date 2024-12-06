@@ -32,16 +32,19 @@ public class Mage extends Adventurer{
 
   public String attack(Adventurer other){
     other.applyDamage(mana);
+    this.setSpecial(this.mana-1);
     return "Cast attack spell on enemy! It did " + mana + "damage!";
   }
 
   public String support(Adventurer other){
     if(this.HP + this.mana < this.maxHP){
       other.setHP(other.getHP+this.mana);
-      return "Cast heal on ally! It healed " + mana + "health!";
+      this.setSpecial(this.mana-1);
+      return "Cast recover on ally! It healed " + mana + "health!";
     }
     else{
       other.setHP(other.getmaxHP);
+      this.setSpecial(this.mana-1);
       return "Cast heal on ally! It healed " + mana + "health!";
     }
   }
@@ -49,10 +52,12 @@ public class Mage extends Adventurer{
   public String support(){
     if(this.HP + this.mana < this.maxHP){
       super.setHP(this.HP+this.mana);
+      this.setSpecial(this.mana-1);
       return "Cast heal on self! It healed " + mana + "health!";
     }
     else{
       super.setHP(this.maxHP);
+      this.setSpecial(this.mana-1);
       return "Cast heal on self! It healed " + mana + "health!";
     }
 
