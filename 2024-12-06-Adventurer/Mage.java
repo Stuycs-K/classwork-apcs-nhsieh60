@@ -43,7 +43,7 @@ public class Mage extends Adventurer{
   
   public String support(){
 	if(this.mana <= 0){
-		return "tried to cast heal on self " + other + " but failed due to lack of " + this.getSpecialName() + "...";
+		return "tried to cast heal on self but failed due to lack of " + this.getSpecialName() + "...";
 	}
     if(super.getHP() + this.mana < super.getmaxHP()){
       super.setHP(super.getHP()+this.mana);
@@ -51,9 +51,10 @@ public class Mage extends Adventurer{
       return "cast heal on self! It healed " + (mana+1) + " health!";
     }
     else{
+		int healed = super.getmaxHP() - super.getHP();
       super.setHP(super.getmaxHP());
       this.setSpecial(this.mana-1);
-      return "cast heal on self! It healed " + (super.getmaxHP() - super.getHP()) + " health!";
+      return "cast heal on self! It healed " + healed + " health!";
     }
 
 	

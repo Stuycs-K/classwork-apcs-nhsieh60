@@ -23,5 +23,19 @@ public class Driver{
 	  System.out.println(currentStats(p3));
 	  System.out.println(p2.getName() + " " + p2.support());
 	  System.out.println(currentStats(p2));
+	  System.out.println(p2.getName() + " " + p2.support());
+	  System.out.println(currentStats(p2));
+	  System.out.println(p2.getName() + " " + p2.support());
+	  System.out.println(currentStats(p2));
+	  for(int i = 0; i < 8; i++){
+		System.out.println(p2.getName() + " " + p2.specialAttack(p3));
+		System.out.println(currentStats(p2));
+		System.out.println(currentStats(p3));
+	  }
+	  System.out.println(p3.getName() + " " + p3.attack(p2));
+	  System.out.println(currentStats(p3));
+	  System.out.println(currentStats(p2));
+	  System.out.println(p2.getName() + " " + p2.support());
+	  System.out.println(currentStats(p2));
   }
 }
