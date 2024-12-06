@@ -42,6 +42,9 @@ public class Mage extends Adventurer{
     }
   
   public String support(){
+	if(this.mana <= 0){
+		return "tried to cast heal on self " + other + " but failed due to lack of " + this.getSpecialName() + "...";
+	}
     if(super.getHP() + this.mana < super.getmaxHP()){
       super.setHP(super.getHP()+this.mana);
       this.setSpecial(this.mana-1);
@@ -56,8 +59,8 @@ public class Mage extends Adventurer{
 	
   }
   public String specialAttack(Adventurer other){
-		other.applyDamage(this.mana);
 		if(this.mana > 0){
+			other.applyDamage(this.mana);
 			this.setSpecial(this.mana-1);
 			return "cast attack spell on enemy " + other + "! It did " + (this.mana+1) + " damage!";
 		}
