@@ -1,7 +1,7 @@
 public class Driver{
 	public static String currentStats(Adventurer input){
-		String stats = "Name: " + input.getName(); 
-		stats += "HP: " + input.getHP() + "/" + input.getMaxHP() + "\n";
+		String stats = "Name: " + input.getName() +"\n"; 
+		stats += "HP: " + input.getHP() + "/" + input.getmaxHP() + "\n";
 		stats += input.getSpecialName() + ": " + input.getSpecial() + "/" + input.getSpecialMax();
 		return stats;
 	}
@@ -15,11 +15,13 @@ public class Driver{
 	  System.out.println(p3.getName() + " " + p3.attack(p2));
 	  System.out.println(currentStats(p3));
 	  System.out.println(currentStats(p2));
+	  System.out.println(p3.getName() + " " + p3.specialAttack(p2));
+	  System.out.println(currentStats(p3));
+	  System.out.println(currentStats(p2));
 	  System.out.println(p1.getName() + " " + p1.support(p3));
 	  System.out.println(currentStats(p1));
 	  System.out.println(currentStats(p3));
-	   System.out.println(p2.getName() + " " + p2.support());
-	  System.out.println(currentStats(p2));
+	  System.out.println(p2.getName() + " " + p2.support());
 	  System.out.println(currentStats(p2));
   }
 }

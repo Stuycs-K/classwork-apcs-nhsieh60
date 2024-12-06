@@ -1,17 +1,17 @@
 public class Mage extends Adventurer{
 
   private int mana, maxMana;
-  private String name;
-  private int HP, maxHP;
 
   public Mage(String name){
     super(name);
+	this.mana = 10;
+    this.maxMana = 10;
   }
 
   public Mage(String name, int hp){
     super(name, hp);
-    int mana = 10;
-    int maxMana = 10;
+    this.mana = 10;
+    this.maxMana = 10;
   }
 
   public String getSpecialName(){
@@ -40,25 +40,30 @@ public class Mage extends Adventurer{
 	  other.restoreSpecial(1);
       return "cast recover on ally " + other + "! It recovered 1 special stat!";
     }
-  }
   
   public String support(){
-    if(this.HP + this.mana < this.maxHP){
-      super.setHP(this.HP+this.mana);
+    if(super.getHP() + this.mana < super.getmaxHP()){
+      super.setHP(super.getHP()+this.mana);
       this.setSpecial(this.mana-1);
-      return "cast heal on self! It healed " + mana+1 + " health!";
+      return "cast heal on self! It healed " + (mana+1) + " health!";
     }
     else{
-      super.setHP(this.maxHP);
+      super.setHP(super.getmaxHP());
       this.setSpecial(this.mana-1);
-      return "cast heal on self! It healed " + mana+1 + " health!";
+      return "cast heal on self! It healed " + (super.getmaxHP() - super.getHP()) + " health!";
     }
 
-	public String specialAttack(Adventurer other){
-		other.applyDamage(this.mana);
-		this.setSpecial(this.mana-1);
-		return "cast attack spell on + " + other + "! It did " + this.mana+1 + " damage!";
-	}
+	
   }
+  public String specialAttack(Adventurer other){
+		other.applyDamage(this.mana);
+		if(this.mana > 0){
+			this.setSpecial(this.mana-1);
+			return "cast attack spell on enemy " + other + "! It did " + (this.mana+1) + " damage!";
+		}
+		else{
+			return "tried to cast attack spell on enemy " + other + " but failed due to lack of " + this.getSpecialName() + "...";
+		}
+	}
 
 }
