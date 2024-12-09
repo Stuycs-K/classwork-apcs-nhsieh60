@@ -44,7 +44,9 @@ public class Game{
       while(action(input) == "invalid"){
         System.out.println("Please enter a valid input. Type: (a)ttack / (sp)ecial / (su)pport / quit");
       }
-
+      if(enemy.getHP() > 0){
+        int randomAction =
+      }
     }
   }
 }
