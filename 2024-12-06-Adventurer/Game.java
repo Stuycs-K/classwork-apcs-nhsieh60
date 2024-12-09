@@ -8,7 +8,7 @@ public class Game{
 		return stats;
 	}
 
-  public static String action(String input){
+  public static String action(String input, Adventurer player, Adventurer enemy){
     if(input.equals("attack") || input.equals("a")){
       return player.attack(enemy);
     }
@@ -29,10 +29,10 @@ public class Game{
   }
   public static void main(String args[]){
     Scanner userInput = new Scanner(System.in);
-    System.out.print("Enter username: ");
+    System.out.println("Enter username: ");
     String userName = userInput.nextLine();
     Adventurer player = new Mage(userName, 50);
-    System.out.print("Enter enemy name: ");
+    System.out.println("Enter enemy name: ");
     userName = userInput.nextLine();
     Adventurer enemy = new CodeWarrior(userName, 50);
 
@@ -41,12 +41,28 @@ public class Game{
       System.out.println(currentStats(enemy));
       System.out.println("Type: (a)ttack / (sp)ecial / (su)pport / quit");
       String input = userInput.nextLine();
-      while(action(input) == "invalid"){
+      while(action(input, player, enemy).equals("invalid")){
         System.out.println("Please enter a valid input. Type: (a)ttack / (sp)ecial / (su)pport / quit");
       }
       if(enemy.getHP() > 0){
-        int randomAction =
+        int randomAction = (int)(Math.random() * 3);
+		if(randomAction == 0){
+			System.out.println(enemy.attack(player));
+		}	
+		else if(randomAction == 1){
+			System.out.println(enemy.specialAttack(player));
+		}
+		else{
+			System.out.println(enemy.support());
+		}
       }
     }
+	if(player.getHP() <= 0){
+		System.out.println("YOU LOST");
+	}
+	else{
+		System.out.println("YOU WON");
+	}
+	//System.out.println("Goodbye!");
   }
 }
