@@ -8,15 +8,43 @@ public class Game{
 		return stats;
 	}
 
+  public static String action(String input){
+    if(input.equals("attack") || input.equals("a")){
+      return player.attack(enemy);
+    }
+    else if(input.equals("special") || input.equals("sp")){
+      return player.specialAttack(enemy);
+    }
+    else if(input.equals("support") || input.equals("su")){
+      return player.support();
+    }
+    else if(input.equals("quit")){
+      System.out.println("Goodbye!");
+      System.exit(1);
+      return "";
+    }
+    else{
+      return "invalid";
+    }
+  }
   public static void main(String args[]){
     Scanner userInput = new Scanner(System.in);
-    System.out.println("Enter username");
+    System.out.print("Enter username: ");
     String userName = userInput.nextLine();
     Adventurer player = new Mage(userName, 50);
-    System.out.println("Enter enemy name");
+    System.out.print("Enter enemy name: ");
     userName = userInput.nextLine();
-    Adventurer enemy = new Mage(userName, 50);
+    Adventurer enemy = new CodeWarrior(userName, 50);
 
-    
+    while(player.getHP() > 0 && enemy.getHP() > 0){
+      System.out.println(currentStats(player));
+      System.out.println(currentStats(enemy));
+      System.out.println("Type: (a)ttack / (sp)ecial / (su)pport / quit");
+      String input = userInput.nextLine();
+      while(action(input) == "invalid"){
+        System.out.println("Please enter a valid input. Type: (a)ttack / (sp)ecial / (su)pport / quit");
+      }
+
+    }
   }
 }
