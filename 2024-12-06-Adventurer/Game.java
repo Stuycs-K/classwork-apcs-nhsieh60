@@ -8,15 +8,16 @@ public class Game{
 		return stats;
 	}
 
-  public static String action(String input){
+  public static String action(String input, Adventurer player, Adventurer enemy){
+	String happened;
     if(input.equals("attack") || input.equals("a")){
-      return player.attack(enemy);
+		happened = player.attack(enemy);
     }
     else if(input.equals("special") || input.equals("sp")){
-      return player.specialAttack(enemy);
+		happened = player.specialAttack(enemy);
     }
     else if(input.equals("support") || input.equals("su")){
-      return player.support();
+		happened = player.support();
     }
     else if(input.equals("quit")){
       System.out.println("Goodbye!");
@@ -26,13 +27,15 @@ public class Game{
     else{
       return "invalid";
     }
+	System.out.println(player.getName() + " " + happened);
+	return happened;
   }
   public static void main(String args[]){
     Scanner userInput = new Scanner(System.in);
-    System.out.print("Enter username: ");
+    System.out.println("Enter username: ");
     String userName = userInput.nextLine();
     Adventurer player = new Mage(userName, 50);
-    System.out.print("Enter enemy name: ");
+    System.out.println("Enter enemy name: ");
     userName = userInput.nextLine();
     Adventurer enemy = new CodeWarrior(userName, 50);
 
@@ -41,12 +44,29 @@ public class Game{
       System.out.println(currentStats(enemy));
       System.out.println("Type: (a)ttack / (sp)ecial / (su)pport / quit");
       String input = userInput.nextLine();
-      while(action(input) == "invalid"){
+      while(action(input, player, enemy).equals("invalid")){
         System.out.println("Please enter a valid input. Type: (a)ttack / (sp)ecial / (su)pport / quit");
+		input = userInput.nextLine();
       }
       if(enemy.getHP() > 0){
-        int randomAction =
+        int randomAction = (int)(Math.random() * 3);
+		if(randomAction == 0){
+			System.out.println(enemy.attack(player));
+		}	
+		else if(randomAction == 1){
+			System.out.println(enemy.specialAttack(player));
+		}
+		else{
+			System.out.println(enemy.support());
+		}
       }
     }
+	if(player.getHP() <= 0){
+		System.out.println(enemy.getName() + " WON");
+	}
+	else{
+		System.out.println(player.getName() + " WON");
+	}
+	//System.out.println("Goodbye!");
   }
 }
